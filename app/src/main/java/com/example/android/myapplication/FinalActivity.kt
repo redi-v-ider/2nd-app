@@ -11,10 +11,12 @@ class FinalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_final)
-        if(intent.hasExtra(Intent.EXTRA_TEXT)){
+        if (intent.hasExtra(Intent.EXTRA_TEXT)) {
             val fullName = intent.getStringExtra(Intent.EXTRA_TEXT)!!
-            val mFinalMessage: TextView = findViewById(R.id.final_message)
-            mFinalMessage.text = "Welcome " + fullName + "!"
+
+            final_message.text = "Welcome " + fullName + "!"
+            val intent = ChildActivity.newIntent(this, "asdads")
+
         }
     }
 
